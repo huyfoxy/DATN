@@ -1,0 +1,40 @@
+.tg-addnav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tg-addnav li {
+  display: inline-block;
+  margin-right: 20px; /* Tăng khoảng cách giữa các mục */
+}
+
+.tg-addnav a {
+  color: #333; /* Màu chữ cho các liên kết */
+  font-weight: 500;
+}
+
+.tg-userlogin {
+  margin-left: 20px; /* Tăng khoảng cách giữa danh sách và dropdown */
+}
+
+.dropdown-menu {
+  border-radius: 0.5rem; /* Làm bo góc cho dropdown */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng cho dropdown */
+}
+
+.dropdown-item {
+  padding: 10px 15px; /* Tăng padding cho dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Màu nền khi hover */
+}
+
+.text-primary {
+  color: #007bff; /* Màu chính cho tên người dùng */
+}
+
+.text-danger {
+  color: #dc3545; /* Màu đỏ cho Logout */
+}

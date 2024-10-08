@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Giỏ Hàng</title>
+        <!-- Liên kết đến Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/comingsoon-bg.jpg '); /* Đường dẫn đến hình ảnh nền */
+            background-size: auto; /* Hình ảnh phủ toàn bộ màn hình */
+            background-position: center; /* Đặt vị trí hình ảnh ở giữa */
+            background-repeat: no-repeat; Không lặp lại hình ảnh
+            position: relative;
+            
+        }
+
+        .cart-container {
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            opacity: 0.9; /* Độ trong suốt cho hộp giỏ hàng */
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .cart-item img {
+            width: 70px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .btn-remove {
+            color: #dc3545;
+        }
+
+        .btn-remove:hover {
+            text-decoration: underline;
+        }
+
+        .cart-footer {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        h2, h4 {
+            color: #333;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="cart-container">
+            <h2 class="text-center">Giỏ Hàng</h2>
+            <div id="cart-items">
+                <!-- Danh sách sản phẩm trong giỏ hàng sẽ được chèn vào đây -->
+                <div class="cart-item row py-3 align-items-center">
+                    <div class="col-md-2 text-center">
+                        <figure>
+                            <img src="images/products/img-01.jpg"
+                                alt="Sản phẩm 1" class="img-fluid">
+                        </figure>
+                    </div>
+                    <div class="col-md-7">
+                        <h5><a href="javascript:void(0);">Our State Fair Is A
+                                Great Function</a></h5>
+                        <h6>$ 12.15</h6>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button class="btn btn-link btn-remove"
+                            onclick="removeItem(1)">Xóa</button>
+                    </div>
+                </div>
+                <div class="cart-item row py-3 align-items-center">
+                    <div class="col-md-2 text-center">
+                        <figure>
+                            <img src="images/products/img-02.jpg"
+                                alt="Sản phẩm 2" class="img-fluid">
+                        </figure>
+                    </div>
+                    <div class="col-md-7">
+                        <h5><a href="javascript:void(0);">Bring Me To
+                                Light</a></h5>
+                        <h6>$ 12.15</h6>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button class="btn btn-link btn-remove"
+                            onclick="removeItem(2)">Xóa</button>
+                    </div>
+                </div>
+                <div class="cart-item row py-3 align-items-center">
+                    <div class="col-md-2 text-center">
+                        <figure>
+                            <img src="images/products/img-03.jpg"
+                                alt="Sản phẩm 3" class="img-fluid">
+                        </figure>
+                    </div>
+                    <div class="col-md-7">
+                        <h5><a href="javascript:void(0);">Have Faith In Your
+                                Soul</a></h5>
+                        <h6>$ 12.15</h6>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button class="btn btn-link btn-remove"
+                            onclick="removeItem(3)">Xóa</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phần Footer chứa nút Xóa tất cả và Thanh toán -->
+            <div class="cart-footer mt-4 text-end">
+                <h4>Tổng tiền: <strong>$ 36.45</strong></h4>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-danger btn-lg me-2"
+                        onclick="clearCart()">Xóa tất cả</button>
+                    <button class="btn btn-success btn-lg"
+                        onclick="checkout()">Thanh toán</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Hàm để xóa sản phẩm (giả lập)
+            function removeItem(itemId) {
+                alert(`Sản phẩm với ID ${itemId} đã được xóa khỏi giỏ hàng.`);
+                // Ở đây bạn có thể thêm logic để xóa sản phẩm từ giỏ hàng
+            }
+        
+            // Hàm để xóa toàn bộ giỏ hàng (giả lập)
+            function clearCart() {
+                alert("Giỏ hàng đã được xóa.");
+                // Ở đây bạn có thể thêm logic để xóa toàn bộ giỏ hàng
+            }
+        
+            // Hàm để thanh toán (giả lập)
+            function checkout() {
+                alert("Bạn đã thanh toán thành công!");
+                // Ở đây bạn có thể thêm logic để thực hiện thanh toán
+            }
+        </script>
+
+    </body>
+
+</html>

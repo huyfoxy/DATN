@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js" lang>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Book Library</title>
+		<meta name="description" content>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/transitions.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/color.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	</head>
+	<body class="tg-comingsoonpage">
+
+		<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+			<!--************************************
+				Main Start
+		*************************************-->
+			<main id="tg-main" class="tg-main tg-haslayout">
+				<!--************************************
+					Coming Soon Start
+			*************************************-->
+				<div class="tg-comingsoonholder">
+					<strong class="tg-logo"><img src="images/logo-02.png"
+							alt="image description"></strong>
+					<!-- Pills navs -->
+					<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a class="nav-link active" id="tab-login" data-mdb-pill-init
+								href="#pills-login" role="tab"
+								aria-controls="pills-login" aria-selected="true">Login</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a class="nav-link" id="tab-register" data-mdb-pill-init
+								href="#pills-register" role="tab"
+								aria-controls="pills-register" aria-selected="false">Register</a>
+						</li>
+					</ul>
+					<!-- Pills navs -->
+
+					<!-- Pills content -->
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+							aria-labelledby="tab-login">
+							<form>
+								<div class="text-center mb-3">
+									<p>Sign in with:</p>
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-facebook-f"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-google"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-twitter"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-github"></i>
+									</button>
+								</div>
+
+								<p class="text-center">or:</p>
+
+								<!-- Email input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="email" id="loginName" class="form-control" />
+									<label class="form-label" for="loginName">Email or username</label>
+								</div>
+
+								<!-- Password input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="password" id="loginPassword" class="form-control" />
+									<label class="form-label" for="loginPassword">Password</label>
+								</div>
+
+								<!-- 2 column grid layout -->
+								<div class="row mb-4">
+									<div class="col-md-6 d-flex justify-content-center">
+										<!-- Checkbox -->
+										<div class="form-check mb-3 mb-md-0">
+											<input class="form-check-input" type="checkbox" value id="loginCheck"
+												checked />
+											<label class="form-check-label" for="loginCheck"> Remember me
+											</label>
+										</div>
+									</div>
+
+									<div class="col-md-6 d-flex justify-content-center">
+										<!-- Simple link -->
+										<a href="#!">Forgot password?</a>
+									</div>
+								</div>
+
+								<!-- Submit button -->
+								<button type="submit" data-mdb-button-init data-mdb-ripple-init
+									class="btn btn-primary btn-block mb-4">Sign in</button>
+
+								<!-- Register buttons -->
+								<div class="text-center">
+									<p>Not a member? <a href="#!">Register</a></p>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade" id="pills-register" role="tabpanel"
+							aria-labelledby="tab-register">
+							<form>
+								<div class="text-center mb-3">
+									<p>Sign up with:</p>
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-facebook-f"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-google"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-twitter"></i>
+									</button>
+
+									<button type="button" data-mdb-button-init data-mdb-ripple-init
+										class="btn btn-link btn-floating mx-1">
+										<i class="fab fa-github"></i>
+									</button>
+								</div>
+
+								<p class="text-center">or:</p>
+
+								<!-- Name input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="text" id="registerName" class="form-control" />
+									<label class="form-label" for="registerName">Name</label>
+								</div>
+
+								<!-- Username input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="text" id="registerUsername" class="form-control" />
+									<label class="form-label" for="registerUsername">Username</label>
+								</div>
+
+								<!-- Email input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="email" id="registerEmail" class="form-control" />
+									<label class="form-label" for="registerEmail">Email</label>
+								</div>
+
+								<!-- Password input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="password" id="registerPassword" class="form-control" />
+									<label class="form-label" for="registerPassword">Password</label>
+								</div>
+
+								<!-- Repeat Password input -->
+								<div data-mdb-input-init class="form-outline mb-4">
+									<input type="password" id="registerRepeatPassword"
+										class="form-control" />
+									<label class="form-label" for="registerRepeatPassword">Repeat
+										password</label>
+								</div>
+
+								<!-- Checkbox -->
+								<div class="form-check d-flex justify-content-center mb-4">
+									<input class="form-check-input me-2" type="checkbox" value
+										id="registerCheck" checked
+										aria-describedby="registerCheckHelpText" />
+									<label class="form-check-label" for="registerCheck">
+										I have read and agree to the terms
+									</label>
+								</div>
+
+								<!-- Submit button -->
+								<button type="submit" data-mdb-button-init data-mdb-ripple-init
+									class="btn btn-primary btn-block mb-3">Sign in</button>
+							</form>
+						</div>
+					</div>
+					<!-- Pills content -->
+					<!--************************************
+					Coming Soon End
+			*************************************-->
+				</main>
+				<!--************************************
+				Main End
+		*************************************-->
+				<!--************************************
+				Footer Start
+		*************************************-->
+				<footer id="tg-footer" class="tg-footer tg-haslayout">
+					<div class="tg-footerbar">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<span class="tg-paymenttype"><img src="images/paymenticon.png"
+											alt="image description"></span>
+									<span class="tg-copyright">2017 All Rights Reserved By &copy; Book
+										Library</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<!--************************************
+				Footer End
+		*************************************-->
+			</div>
+			<!--************************************
+			Wrapper End
+	*************************************-->
+			<script src="js/vendor/jquery-library.js"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>
+			<script
+				src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/jquery.vide.min.js"></script>
+			<script src="js/countdown.js"></script>
+			<script src="js/jquery-ui.js"></script>
+			<script src="js/parallax.js"></script>
+			<script src="js/countTo.js"></script>
+			<script src="js/appear.js"></script>
+			<script src="js/gmap3.js"></script>
+			<script src="js/main.js"></script>
+			<script>
+		function comingsooncounter() {
+			var launch = new Date(2018, 06, 14, 11, 15);
+			var days = $('#days');
+			var hours = $('#hours');
+			var minutes = $('#minutes');
+			var seconds = $('#seconds');
+			setDate();
+			function setDate(){
+				var now = new Date();
+				if( launch < now ){
+					days.html('<p>Days</p><h1>0</h1>');
+					hours.html('<p>Hours</p><h1>0</h1>');
+					minutes.html('<p>Minutes</p><h1>0</h1>');
+					seconds.html('<p>Seconds</p><h1>0</h1>');
+				}
+				else{
+					var s = -now.getTimezoneOffset()*60 + (launch.getTime() - now.getTime())/1000;
+					var d = Math.floor(s/86400);
+					days.html('<h1>'+d+'</h1><p>Day'+(d>1?'s':''),'</p>');
+					s -= d*86400;
+					var h = Math.floor(s/3600);
+					hours.html('<h1>'+h+'</h1><p>Hour'+(h>1?'s':''),'</p>');
+					s -= h*3600;
+					var m = Math.floor(s/60);
+					minutes.html('<h1>'+m+'</h1><p>Minute'+(m>1?'s':''),'</p>');
+					s = Math.floor(s-m*60);
+					seconds.html('<h1>'+s+'</h1><p>Second'+(s>1?'s':''),'</p>');
+					setTimeout(setDate, 1000);
+				}
+			}
+		}
+		comingsooncounter();
+	</script>
+		</body>
+	</html>

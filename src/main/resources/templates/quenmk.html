@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quên Mật Khẩu</title>
+        <!-- Liên kết đến Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <!-- Liên kết đến FontAwesome CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/comingsoon-bg.jpg'); /* Hình nền */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Hộp chứa form quên mật khẩu */
+        .login-container {
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.9); /* Nền trắng với độ trong suốt */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container form {
+            margin-top: 20px;
+        }
+
+        /* Style cho logo */
+        .login-logo {
+            width: 150px; /* Độ rộng logo */
+            margin-bottom: 20px;
+        }
+
+        /* Style cho nút */
+        .btn {
+            width: 100%;
+        }
+
+        /* Style cho liên kết */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .form-outline {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block; /* Đặt thành block để nó đứng một dòng */
+            margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+            text-align: left; /* Căn trái */
+        }
+
+        i {
+            border: solid 3px;
+            padding: 5px;
+            border-radius: 100px;
+        }
+
+        .otp-container {
+            display: none; /* Ẩn phần nhập OTP ban đầu */
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="login-container">
+            <!-- Chèn logo -->
+            <img src="images/logo-02.png" alt="Logo" class="login-logo">
+
+            <h2>Quên Mật Khẩu</h2>
+            <p>Vui lòng nhập địa chỉ email của bạn. Chúng tôi sẽ gửi cho bạn mã
+                OTP để khôi phục mật khẩu.</p>
+
+            <form id="emailForm" onsubmit="return false;">
+                <!-- Nhập Email -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="forgotEmail">Email</label>
+                    <input type="email" id="forgotEmail" class="form-control"
+                        placeholder="Nhập email của bạn" required />
+                </div>
+
+                <!-- Nút Gửi -->
+                <button type="button" class="btn btn-primary btn-block mb-3"
+                    onclick="sendResetLink()">Gửi Mã OTP</button>
+            </form>
+
+            <!-- Phần nhập mã OTP -->
+            <div class="otp-container" id="otpContainer">
+                <h2>Nhập Mã OTP</h2>
+                <p>Chúng tôi đã gửi mã OTP đến địa chỉ email của bạn.</p>
+                <form id="otpForm" onsubmit="return false;">
+                    <div class="form-outline mb-3">
+                        <label class="form-label" for="otp">Mã OTP</label>
+                        <input type="text" id="otp" class="form-control"
+                            placeholder="Nhập mã OTP" required />
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block mb-3"
+                        onclick="verifyOTP()">Xác Thực Mã OTP</button>
+                </form>
+            </div>
+
+            <!-- Liên kết Đăng Nhập -->
+            <div class="text-center">
+                <p><a href="login.html">Đăng Nhập</a></p>
+            </div>
+        </div>
+
+        <!-- Scripts cho Bootstrap -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+        function sendResetLink() {
+            var email = document.getElementById('forgotEmail').value;
+
+            if (email) {
+                // Giả lập gửi mã OTP (thay thế bằng logic thực tế trong ứng dụng)
+                alert('Mã OTP đã được gửi đến email của bạn.');
+                
+                // Hiện phần nhập mã OTP và ẩn phần nhập email
+                document.getElementById('emailForm').style.display = 'none';
+                document.getElementById('otpContainer').style.display = 'block';
+            } else {
+                alert('Vui lòng nhập địa chỉ email.');
+            }
+        }
+
+        function verifyOTP() {
+            var otp = document.getElementById('otp').value;
+
+            if (otp) {
+                // Giả lập xác thực mã OTP (thay thế bằng logic thực tế trong ứng dụng)
+                alert('Mã OTP xác thực thành công! Bạn có thể khôi phục mật khẩu của mình.');
+                location.href = 'reset-password.html'; // Chuyển hướng đến trang đặt lại mật khẩu
+            } else {
+                alert('Vui lòng nhập mã OTP.');
+            }
+        }
+    </script>
+    </body>
+
+</html>
