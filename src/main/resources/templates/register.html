@@ -1,202 +1,177 @@
 <!doctype html>
 <html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trang Đăng Ký</title>
+    <!-- Liên kết đến Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Liên kết đến FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Thêm jQuery từ CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Trang Đăng Ký</title>
-        <!-- Liên kết đến Bootstrap CSS -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-        <!-- Liên kết đến FontAwesome CSS -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('images/comingsoon-bg.jpg'); /* Hình nền */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('images/comingsoon-bg.jpg'); /* Hình nền */
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
 
-        /* Hộp chứa form đăng ký */
-        .login-container {
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.9); /* Nền trắng với độ trong suốt */
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
+/* Hộp chứa form đăng ký */
+.login-container {
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.9); /* Nền trắng với độ trong suốt */
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+}
 
-        .login-container form {
-            margin-top: 20px;
-        }
+.login-container form {
+	margin-top: 20px;
+}
 
-        /* Style cho logo */
-        .login-logo {
-            width: 150px; /* Độ rộng logo */
-            margin-bottom: 20px;
-        }
+/* Style cho logo */
+.login-logo {
+	width: 150px; /* Độ rộng logo */
+	margin-bottom: 20px;
+}
 
-        /* Style cho nút */
-        .btn {
-            width: 100%;
-        }
+/* Style cho nút */
+.btn {
+	width: 100%;
+}
 
-        /* Style cho liên kết */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
+/* Style cho liên kết */
+a {
+	color: #007bff;
+	text-decoration: none;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+a:hover {
+	text-decoration: underline;
+}
 
-        .form-outline {
-            margin-bottom: 15px;
-        }
+.form-outline {
+	margin-bottom: 15px;
+}
 
-        .form-label {
-            display: block; /* Đặt thành block để nó đứng một dòng */
-            margin-bottom: 5px; /* Khoảng cách dưới nhãn */
-            text-align: left; /* Căn trái */
-        }
+.form-label {
+	display: block; /* Đặt thành block để nó đứng một dòng */
+	margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+	text-align: left; /* Căn trái */
+}
 
-        i {
-            border: solid 3px;
-            padding: 5px;
-            border-radius: 100px;
-        }
-    </style>
-    </head>
+i {
+	border: solid 3px;
+	padding: 5px;
+	border-radius: 100px;
+}
+</style>
+</head>
 
-    <body>
-        <div class="login-container">
-            <!-- Chèn logo -->
-            <img src="images/logo-02.png" alt="Logo" class="login-logo">
+<body>
+	<div class="login-container">
+		<!-- Chèn logo -->
+		<img src="images/logo-02.png" alt="Logo" class="login-logo">
 
-            <!-- Pills navs -->
-            <ul class="nav nav-pills nav-justified mb-2" id="ex1"
-                role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="tab-register" href="register.html"
-                        role="tab"
-                        aria-controls="pills-register"
-                        aria-selected="false">Đăng Ký</a>
-                </li>
-            </ul>
+		<!-- Pills navs -->
+		<ul class="nav nav-pills nav-justified mb-2" id="ex1" role="tablist">
+			<li class="nav-item" role="presentation"><a class="nav-link"
+				id="tab-register" href="register.html" role="tab"
+				aria-controls="pills-register" aria-selected="false">Đăng Ký</a></li>
+		</ul>
 
-            <!-- Nội dung Pills -->
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="pills-register"
-                    role="tabpanel" aria-labelledby="tab-register">
-                    <form onsubmit="return false;">
-                        <!-- Nhập Tên -->
-                        <div class="form-outline mb-2">
-                            <label class="form-label"
-                                for="registerName">Tên</label>
-                            <input type="text" id="registerName"
-                                class="form-control"
-                                placeholder="Nhập tên của bạn" required />
-                        </div>
+		<!-- Nội dung Pills -->
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="pills-register"
+				role="tabpanel" aria-labelledby="tab-register">
+				<form action="#" th:action="@{/register}" method="post" enctype="multipart/form-data">
+					<!-- Nhập Tên Người Dùng -->
+					<div class="form-outline mb-2">
+						<label class="form-label" for="registerUsername">Tên Tài Khoản</label>
+						<input type="text" id="registerUsername" name="username" class="form-control" placeholder="Nhập tên người dùng của bạn" required />
+					</div>
 
-                        <!-- Nhập Email -->
-                        <div class="form-outline mb-2">
-                            <label class="form-label"
-                                for="registerEmail">Email</label>
-                            <input type="email" id="registerEmail"
-                                class="form-control"
-                                placeholder="Nhập email của bạn" required />
-                        </div>
+					<!-- Nhập Tên -->
+					<div class="form-outline mb-2">
+						<label class="form-label" for="registerName">Họ và Tên</label>
+						<input type="text" id="registerName" name="fullname" class="form-control" placeholder="Nhập tên của bạn" required />
+					</div>
 
-                        <!-- Nhập Mật Khẩu -->
-                        <div class="form-outline mb-2">
-                            <label class="form-label" for="registerPassword">Mật
-                                khẩu</label>
-                            <input type="password" id="registerPassword"
-                                class="form-control"
-                                placeholder="Nhập mật khẩu của bạn" required />
-                        </div>
+					<!-- Nhập Email -->
+					<div class="form-outline mb-2">
+						<label class="form-label" for="registerEmail">Email</label>
+						<input type="email" id="registerEmail" name="email" class="form-control" placeholder="Nhập email của bạn" required />
+					</div>
 
-                        <!-- Nhập Xác Nhận Mật Khẩu -->
-                        <div class="form-outline mb-3">
-                            <label class="form-label"
-                                for="registerConfirmPassword">Xác nhận mật
-                                khẩu</label>
-                            <input type="password" id="registerConfirmPassword"
-                                class="form-control"
-                                placeholder="Xác nhận mật khẩu của bạn"
-                                required />
-                        </div>
+					<!-- Nhập Mật Khẩu -->
+					<div class="form-outline mb-2">
+						<label class="form-label" for="registerPassword">Mật khẩu</label>
+						<input type="password" id="registerPassword" name="password" class="form-control" placeholder="Nhập mật khẩu của bạn" required />
+					</div>
 
-                        <!-- Nút Gửi -->
-                        <button type="button"
-                            class="btn btn-primary btn-block mb-3"
-                            onclick="validateForm()">Đăng Ký</button>
+					<!-- Nhập Xác Nhận Mật Khẩu -->
+					<div class="form-outline mb-3">
+						<label class="form-label" for="registerConfirmPassword">Xác Nhận Mật Khẩu</label>
+						<input type="password" id="registerConfirmPassword" name="confirmPassword" class="form-control" placeholder="Xác nhận mật khẩu của bạn" required />
+					</div>
 
-                        <div class="text-center mb-3">
-                            <p>Đăng ký bằng:</p>
-                            <div class="d-flex justify-content-center">
-                                <button type="button"
-                                    class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button type="button"
-                                    class="btn btn-link btn-floating mx-1 btn-sm"
-                                    style="font-size: 16px;">
-                                    <i class="fab fa-google"></i>
-                                </button>
-                                <button type="button"
-                                    class="btn btn-link btn-floating mx-1 btn-sm"
-                                    style="font-size: 16px;">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
-                        </div>
+					<!-- Chọn Hình Ảnh -->
+					<div class="form-outline mb-3">
+						<label class="form-label" for="registerPhoto">Chọn Hình Ảnh</label>
+						<input type="file" id="registerPhoto" name="photo" class="form-control" accept="image/*" />
+					</div>
 
-                        <!-- Liên kết Đăng Nhập -->
-                        <div class="text-center">
-                            <p>Đã có tài khoản? <a href="login.html">Đăng
-                                    Nhập</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
+					<!-- Nút Gửi -->
+					<button type="submit" class="btn btn-primary btn-block mb-3">Đăng Ký</button>
 
-            <!-- Scripts cho Bootstrap -->
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+					<div class="text-center mb-3">
+						<p>Đăng ký bằng:</p>
+						<div class="d-flex justify-content-center">
+							<button type="button" class="btn btn-link btn-floating mx-1">
+								<i class="fab fa-instagram"></i>
+							</button>
+							<button type="button" class="btn btn-link btn-floating mx-1 btn-sm" style="font-size: 16px;">
+								<i class="fab fa-google"></i>
+							</button>
+							<button type="button" class="btn btn-link btn-floating mx-1 btn-sm" style="font-size: 16px;">
+								<i class="fab fa-twitter"></i>
+							</button>
+						</div>
+					</div>
 
-            <script>
-            function validateForm() {
-                var name = document.getElementById('registerName').value;
-                var email = document.getElementById('registerEmail').value;
-                var password = document.getElementById('registerPassword').value;
-                var confirmPassword = document.getElementById('registerConfirmPassword').value;
+					<!-- Liên kết Đăng Nhập -->
+					<div class="text-center">
+						<p>Đã có tài khoản? <a href="login.html">Đăng Nhập</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
 
-                if (name && email && password && confirmPassword) {
-                    if (password === confirmPassword) {
-                        // Chuyển hướng đến trang xác thực
-                        location.href = 'verification.html';
-                    } else {
-                        alert('Mật khẩu không khớp! Vui lòng kiểm tra lại.');
-                    }
-                } else {
-                    alert('Vui lòng điền đầy đủ thông tin.');
-                }
-            }
-        </script>
-        </div>
-    </body>
+		<!-- Scripts cho Bootstrap -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
+		<!-- Kiểm tra file ảnh trước khi gửi form -->
+		<script>
+			$('form').on('submit', function (e) {
+				var fileInput = $('#registerPhoto')[0];
+				if (fileInput.files.length === 0) {
+					alert('Vui lòng chọn một hình ảnh!');
+					e.preventDefault(); // Ngăn chặn gửi form nếu không có file
+				}
+			});
+		</script>
+	</div>
+</body>
 </html>
