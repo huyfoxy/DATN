@@ -1,16 +1,33 @@
 package com.nhom3.Entity;
 
-import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Entity
+import java.util.Set;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Data
-@AllArgsConstructor
-@AllArgsConstructor
+@Entity
+@Table(name = "Accounts")
 public class Account {
-   String username  ;
-    String password ;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // Sử dụng kiểu Long cho ID
 
+    private String username;
+    private String password;
+    private String fullname;
+    private String photo;
+    private String email;
 
+    @ManyToMany(fetch = FetchType.EAGER) // Tải dữ liệu liên kết ngay lập tức
+    @JoinTable(
+        name = "RoleDetails", // Tên bảng liên kết
+        joinColumns = @JoinColumn(name = "account_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> roles; // Danh sách vai trò của tài khoản
 }
